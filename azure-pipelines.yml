@@ -4,7 +4,7 @@ pool:
 steps:
 - bash: echo "Our First Pipeline"
 
-jobs:
+  jobs:
 - job: Firstjob
   timeoutInMinutes: 10
   steps:
