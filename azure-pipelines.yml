@@ -17,3 +17,16 @@ steps:
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+jobs:
+- job: Firstjob
+  timeoutInMinutes: 10
+  steps:
+  - bash: echo "The First job"
+
+- job: Secondjob
+  steps:
+  - bash: echo "Our Second Pipeline"
