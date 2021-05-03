@@ -3,8 +3,3 @@ pool:
 
 steps:
 - bash: echo "Our First Pipeline"
-
-- job: Firstjob
-  timeoutInMinutes: 10
-  steps:
-  - bash: echo "The First job"
