@@ -1,1 +1,12 @@
-# vishnu
+pool:
+  vmImage: 'ubuntu-latest'
+
+jobs:
+- job: Firstjob
+  timeoutInMinutes: 10
+  steps:
+  - bash: echo "The First job"
+
+- job: Secondjob
+  steps:
+  - bash: echo "Our Second Pipeline"
