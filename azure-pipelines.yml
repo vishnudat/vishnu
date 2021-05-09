@@ -1,5 +1,16 @@
-pool:
-  vmImage: 'ubuntu-latest'
 
-steps:
-- bash: echo "Our First Pipeline"
+resources:
+  pipelines:
+  - pipeline: parent
+    source: Parent.CI
+    trigger: 
+      branches:
+      - master
+- task: ArchiveFiles@2
+  inputs:
+    rootFolderOrFile: '$(Build.BinariesDirectory)'
+    includeRootFolder: true
+    archiveType: 'zip'
+    archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
+    replaceExistingArchive: true
+  vmImage: 'ubuntu-latest'
