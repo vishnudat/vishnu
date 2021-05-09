@@ -11,7 +11,7 @@ steps:
   inputs:
     buildType: 'specific'
     project: '<YOUR_PROJECT_ID_HERE>'
-    pipeline: '229'
+    pipeline: '29'
     buildVersionToDownload: 'latest'
     downloadType: 'specific'
     downloadPath: '$(System.ArtifactsDirectory)'
